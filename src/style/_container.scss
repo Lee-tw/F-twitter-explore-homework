@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding: 40px 60px;
+  border: $border-color solid 1px;
+  margin-right: 500px;
+  margin-left: 500px;
+
+  h2 {
+    color: $white;
+  }
+
+  p {
+    color: $primary-color;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    > input {
+      background-color: transparent;
+      border: 0;
+      margin-bottom: 10px;
+      padding-bottom: 25px;
+      font-size: 15px;
+      border-bottom: $border-color solid 1px;
+    }
+  }
+
+  ul {
+    > li {
+      text-align: center;
+      margin-bottom: 15px;
+      &:nth-child(1) {
+        @include btn-variant($primary-color, transparent);
+      }
+      &:last-child {
+        @include btn-variant(white, $primary-color);
+      }
+    }
+  }
+}

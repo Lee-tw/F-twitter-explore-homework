@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  border-bottom: $border-color solid 1px;
+
+  nav {
+    > ul {
+      display: flex;
+      > li {
+        margin-right: 10px;
+        @include btn-variant($primary-color, transparent);
+        &:last-child {
+          margin-right: 0px;
+          @include btn-variant(white, $primary-color);
+        }
+      }
+    }
+  }
+}
